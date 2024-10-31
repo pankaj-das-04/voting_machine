@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c6c25b34-7b80-46e4-a424-39de9977fcd9)# Voting Machine
+# Voting Machine
 The purpose of this voting machine is to facilitate a fair and transparent voting process for electing one of four candidates.<br/>
 Here are some specific purposes of this machine:<br/>
 1.Vote Counting<br/>
