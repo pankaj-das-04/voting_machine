@@ -1,0 +1,21 @@
+This is a Verilog implementation of a voting machine project. Here's a breakdown of the design:
+
+Modules:
+1.buttonControl: This module is responsible for detecting a valid vote from a button press. 
+  It takes in a clock, reset, and button input, and outputs a valid vote signal. 
+  The module uses a counter to count the number of clock cycles the button is pressed, and only outputs a valid vote if the button is pressed for at least 10 clock cycles.
+
+2.modeControl: This module controls the mode of the voting machine. It takes in a clock, reset, mode, and various vote-related inputs, and outputs the LED display. 
+  The module has two modes: voting mode (mode 0) and result mode (mode 1). In voting mode, the LED display is set to all ones (FF) if a valid vote is cast. 
+  In result mode, the LED display shows the vote count for each candidate.
+
+3.voteLogger: This module logs the votes for each candidate. It takes in a clock, reset, mode, and vote validity signals for each candidate, and outputs the vote count for each candidate.
+
+4.votingMachine: This is the top-level module that integrates the other modules. It takes in a clock, reset, mode, and button inputs for each candidate, and outputs the LED display.
+
+Operation:
+1.When a button is pressed, the buttonControl module starts counting the clock cycles. If the button is pressed for at least 10 clock cycles, it outputs a valid vote signal.
+2.The voteLogger module logs the votes for each candidate based on the valid vote signals.
+3.The modeControl module controls the mode of the voting machine. In voting mode, it sets the LED display to all ones (FF) if a valid vote is cast. 
+  In result mode, it displays the vote count for each candidate.
+4.The votingMachine module integrates the other modules and outputs the final LED display.
